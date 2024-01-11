@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        width: 800px;
+        height: 600px;
+        /* background-color: green; */
+        margin: auto;
+    }
+    .big-box{
+        width: 68%;
+        height: 100%;
+        background-color: purple;
+        margin-right: 2%;
+        float: left;
+    }
+    .small-box{
+        width: 30%;
+        height: 100%;
+        background-color: brown;
+        float: left;
+    }
+    .small-box.image{
+        width: 100%;
+        height: 23%;
+        float: left;
+    }
+     img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .big-box img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+</style>
+<body>
+    <div class="container">
+        <div class="big-box">
+            <img src="image/pic1.jpg" alt="" id="big-box">
+
+        </div>
+        <div class="small-box">
+            <div class="image">
+                <img src="image/pic2.jpg" alt="" onclick="changeIMG1()">
+
+            </div>
+            <div class="image">
+
+            </div>
+            <div class="image">
+
+            </div>
+            <div class="image">
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+<script>
+    function changeIMG1(){
+        document.getElementById('big-box').setAttribute('src','image/pic2.jpg');
+    }
+</script>
+</html>

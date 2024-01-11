@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+   <style>
+       .box{
+           width: 200px;
+           height: 200px;
+           background-color: green;
+           margin: 20px;
+       }
+   </style>
+<body>
+    <!-- <div class="box"  id="box"> -->
+        
+    <!-- </div>  -->
+   <!-- <img src="image/pic1.jpg" alt="" id="image" onmouseover="Changeimg()" onmouseout="Default()">
+    <h1 id="demo"> Hello World </h1>
+    <input type="button" value="Please click here" onclick="test()">
+    <input type="button" value="Hide Box" onclick="Hidebox()">
+    <input type="button" value="Show Box" onclick="Showbox()">
+    <input type="button" value="changeIMG" onclick="Changeimg()">
+    <input type="button" value="Default" onclick="Default()"> -->
+     <input type="text" id="txa" onkeyup="testtt()">
+    <!-- onkeyup use for auto throw value -->
+    <input type="text" id="txb" onkeyup="testtt()">
+    <input type="text" id="total">
+    <input type="button" value="+" onclick="sum()">
+    <input type="button" value="-" onclick="Minus()">
+    <input type="button" value="*" onclick="Multiplus()">     
+    <input type="button" value="/" onclick="Division()"> 
+</body>
+    <script>
+        function test(){
+           //alert('Hello Guys')
+           //innerHTML use for chang HTML Content
+           //stye use for change CSS style 
+            document.getElementById('demo').innerHTML="javascript";
+            document.getElementById('demo').style.color="blue";
+           // document.getElementById('demo').style.backgroundColor="red";
+        }
+        function Hidebox(){
+            //.style.display "none" use for hide 
+            document.getElementById('box').style.display="none";
+        }
+        function Showbox(){
+            //.style.display"block" use for show 
+            document.getElementById('box').style.display="block";
+        }
+        function Changeimg(){
+            //set Attribute use for change picture 
+            document.getElementById('image').setAttribute('src','image/pic2.jpg');
+        }
+        function Default(){
+            document.getElementById('image').setAttribute('src','image/pic1.jpg');
+        }
+        function sum(){
+            var txa=document.getElementById('txa').value;
+            var txb=document.getElementById('txb').value;
+            document.getElementById('total').value=parseInt(txa) +parseInt(txb);
+       }
+       function Minus(){
+            var txa=document.getElementById('txa').value;
+            var txb=document.getElementById('txb').value;
+            document.getElementById('total').value=parseInt(txa) - parseInt(txb);
+       }
+       function Multiplus(){
+            var txa=document.getElementById('txa').value;
+            var txb=document.getElementById('txb').value;
+            document.getElementById('total').value=parseInt(txa) * parseInt(txb);
+       }
+       function Division(){
+            var txa=document.getElementById('txa').value;
+            var txb=document.getElementById('txb').value;
+            document.getElementById('total').value=parseInt(txa) / parseInt(txb);
+       }
+    //    function testtt(){
+    //         var txa=document.getElementById('txa').value;
+    //         var txb=document.getElementById('txb').value;
+    //         document.getElementById('total').value= txa * txb;
+    //    }
+    </script>
+</html>

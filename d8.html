@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>     
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .menu{
+        width: 80%;
+        overflow: hidden;
+        background-color: brown;
+        margin: auto;
+    }
+    .menu ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .menu ul li{
+        float: left;
+    }
+    .menu ul li a{
+        display: block ;
+        text-decoration: none;
+        color: white;
+        padding: 20px;
+    }
+    .sub-menu{
+        width: 100px;
+        background-color: blue;
+        display: none;
+        position: absolute;
+    }
+    .sub-menu ul li a{
+        color: white;
+        text-decoration: none;
+    }
+    .menu ul li:hover .sub-menu{
+        display: block;
+    }
+</style>
+<body>
+    <div class="menu">
+        <!-- <ul>
+            <li>
+                <a href="">HTML</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li>
+                            <a href="">HTML1</a>
+                        </li>
+                        <li>
+                            <a href="">HTML1</a>
+                        </li>
+                        <li>
+                            <a href="">HTML1</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </li>
+            <li>
+                <a href="">CSS</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li>
+                            <a href="">CSS1</a>
+                        </li>
+                        <li>
+                            <a href="">CSS1</a>
+                        </li>
+                        <li>
+                            <a href="">CSS1</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </li>
+            <li>
+                <a href="">Java</a>
+            </li>
+        </ul> -->
+    </div>
+
+</body>
+<script>
+    var color=['Green','Blue','Yellow','white','Hello'];
+    var item=[
+        {
+            "menu":"HTML",
+            "sub-menu":['HTML1','HTML1','HTML1']
+        },
+        {
+            "menu":"PHPS",
+            "sub-menu":['PHP1','PHP2','PHP3']
+        },
+        {
+            "menu":"JAVASCRIPTS",
+            "sub-menu":['JAVA1','JAVA2','JAVA3']    
+        },
+        {
+            "menu":"LARAVELS"    
+        }
+    ]
+    var txt=" ";             
+    for( var i=0; i<item.length; i++){
+        // txt = txt + color[i] + "  ";
+        // txt = txt + "<li><a>"+color[i]+"</a></li>"
+        // txt += `
+        //      <li>
+        //         <a href="${item[i]["link"]} ">${item[i]["menu"]}</a>
+        //     </li>
+        // `;
+    var sub=item[i]['sub-menu'];
+            for(var j=0;j<sub.length;j++) {
+                alert(sub[j])
+            }
+    }
+    // document.querySelector('.menu').innerHTML="<ul>"+txt+"</ul>"
+</script>
+</html>

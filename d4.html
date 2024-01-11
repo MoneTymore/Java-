@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Convert From GB to MB<h1>
+    <input type="text" class="txta">GB
+    <input type="text" class="txtb">MB
+    <h1><span id="demo" style="color: blue;">0</span> Gegabyte = <span id="demo1" style="color: red;">0</span> Megabyte</h1>
+</body>
+<script>
+        document.querySelector('.txta').addEventListener("keyup",()=>{
+            const txta=document.querySelector('.txta').value;
+            document.querySelector('.txtb').value=txta*1024;
+            document.getElementById('demo').innerHTML=txta;
+            const txtb=document.querySelector('.txtb').value;
+            document.getElementById('demo1').innerHTML=txtb;
+        })
+
+</script>
+</html>
